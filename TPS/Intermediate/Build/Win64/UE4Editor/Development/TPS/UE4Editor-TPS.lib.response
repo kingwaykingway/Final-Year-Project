@@ -1,0 +1,26 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-TPS.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\TPSEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\CrosshairWidget.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\InteractionInterface.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Projectile.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPS.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPSFunctionLibrary.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPSHUD.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Weapon.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\CrosshairWidget.gen.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\InteractionInterface.gen.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Projectile.gen.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPS.init.gen.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPSFunctionLibrary.gen.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPSHUD.gen.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Weapon.gen.cpp.obj"
+"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Default.rc2.res"
+/OUT:"C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\UE4Editor-TPS.lib"
+/INCLUDE:IMPLEMENT_MODULE_TPS

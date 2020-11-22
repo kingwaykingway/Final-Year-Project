@@ -1,0 +1,3 @@
+C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Source\TPS\TPS.Build.cs
+C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Source\TPS.Target.cs
+C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Source\TPSEditor.Target.cs
