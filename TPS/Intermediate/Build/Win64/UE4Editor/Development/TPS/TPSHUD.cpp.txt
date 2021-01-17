@@ -1,11 +1,11 @@
-C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Definitions.TPS.h
-c:\users\kingw\onedrive\documents\unreal projects\tps\source\tps\TPSHUD.h
+C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Definitions.TPS.h
+c:\unreal projects\final-year-project\tps\source\tps\TPSHUD.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/HUD.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/HUDHitBox.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\GameFramework/DebugTextInfo.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DebugTextInfo.generated.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\HUD.generated.h
-C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\TPSHUD.generated.h
+C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\TPSHUD.generated.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Engine/Canvas.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Public\CanvasItem.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Engine/Font.h

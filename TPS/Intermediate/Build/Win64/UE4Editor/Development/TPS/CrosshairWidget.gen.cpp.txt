@@ -1,7 +1,7 @@
-C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Definitions.TPS.h
+C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Definitions.TPS.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\kingw\OneDrive\Documents\Unreal Projects\TPS\Source\TPS/CrosshairWidget.h
+C:\Unreal Projects\Final-Year-Project\TPS\Source\TPS/CrosshairWidget.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidget.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\UMG\Public\Components/SlateWrapperTypes.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\SlateWrapperTypes.generated.h
@@ -113,4 +113,4 @@ C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\DynamicPropertyPath.generated.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBlueprintGeneratedClass.generated.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
-c:\users\kingw\onedrive\documents\unreal projects\tps\intermediate\build\win64\ue4editor\inc\tps\CrosshairWidget.generated.h
+c:\unreal projects\final-year-project\tps\intermediate\build\win64\ue4editor\inc\tps\CrosshairWidget.generated.h
