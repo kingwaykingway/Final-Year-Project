@@ -426,20 +426,21 @@
 /I ThirdParty
 /I ThirdParty\libSampleRate\Public
 /I ThirdParty\libSampleRate
-/I "D:\Study\UE4 Projects\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS"
-/I "D:\Study\UE4 Projects\TPS\Source"
-/I "D:\Study\UE4 Projects\TPS\Source\TPS"
-/I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\INCLUDE"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"
-/FI"D:\Study\UE4 Projects\TPS\Intermediate\Build\Win64\TPSEditor\Development\Engine\SharedPCH.Engine.h"
-/Yu"D:\Study\UE4 Projects\TPS\Intermediate\Build\Win64\TPSEditor\Development\Engine\SharedPCH.Engine.h"
-/Fp"D:\Study\UE4 Projects\TPS\Intermediate\Build\Win64\TPSEditor\Development\Engine\SharedPCH.Engine.h.pch"
-"D:\Study\UE4 Projects\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\CrosshairWidget.gen.cpp"
-/FI"D:\Study\UE4 Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Definitions.TPS.h"
-/Fo"D:\Study\UE4 Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\CrosshairWidget.gen.cpp.obj"
+/I "C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS"
+/I "C:\Unreal Projects\Final-Year-Project\TPS\Source"
+/I "C:\Unreal Projects\Final-Year-Project\TPS\Source\TPS"
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.16299.0\winrt"
+/FI"C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\TPSEditor\Development\Engine\SharedPCH.Engine.h"
+/Yu"C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\TPSEditor\Development\Engine\SharedPCH.Engine.h"
+/Fp"C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\TPSEditor\Development\Engine\SharedPCH.Engine.h.pch"
+"C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\CrosshairWidget.gen.cpp"
+/FI"C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Definitions.TPS.h"
+/Fo"C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\CrosshairWidget.gen.cpp.obj"
 /TP
 /GR-
 /W4

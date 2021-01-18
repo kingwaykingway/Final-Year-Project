@@ -127,6 +127,7 @@ void AWeapon::Fire_Implementation()
 			UProjectileMovementComponent* movement = launchingProjectile->ProjectileMovementComponent;
 			movement->InitialSpeed = MuzzleVelocity;
 			movement->MaxSpeed = MuzzleVelocity;
+			launchingProjectile->Damage = Damage;
 			launchingProjectile->Range = Range;
 			launchingProjectile->FireInDirection(launchingProjectile->GetActorForwardVector());
 

@@ -1,2 +1,2 @@
-D:\Study\UE4 Projects\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Definitions.TPS.h
-D:\Study\UE4 Projects\TPS\Source\TPS\TPS.h
+C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Definitions.TPS.h
+c:\unreal projects\final-year-project\tps\source\tps\TPS.h
