@@ -40,6 +40,8 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 	ENGINE_API UClass* Z_Construct_UClass_ULightComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystemComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
+	TPS_API UClass* Z_Construct_UClass_UInteractionInterface_NoRegister();
 // End Cross Module References
 	static UEnum* ETargetingTool_StaticEnum()
 	{
@@ -776,7 +778,12 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GunMesh_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_GunMesh;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InteractionTrigger_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InteractionTrigger;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -1195,6 +1202,14 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeapon_Statics::NewProp_GunMesh = { "GunMesh", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeapon, GunMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWeapon_Statics::NewProp_GunMesh_MetaData, ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::NewProp_GunMesh_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionTrigger_MetaData[] = {
+		{ "Category", "Component" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Weapon.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionTrigger = { "InteractionTrigger", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeapon, InteractionTrigger), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionTrigger_MetaData, ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionTrigger_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWeapon_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_IsStrobeLightActivated,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_StrobeLightFrequency,
@@ -1241,7 +1256,11 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_TacticalLight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_LazerPointer,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_GunMesh,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionTrigger,
 	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AWeapon_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UInteractionInterface_NoRegister, (int32)VTABLE_OFFSET(AWeapon, IInteractionInterface), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AWeapon_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AWeapon>::IsAbstract,
 	};
@@ -1252,11 +1271,11 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		DependentSingletons,
 		FuncInfo,
 		Z_Construct_UClass_AWeapon_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		ARRAY_COUNT(DependentSingletons),
 		ARRAY_COUNT(FuncInfo),
 		ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::PropPointers),
-		0,
+		ARRAY_COUNT(InterfaceParams),
 		0x009000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_AWeapon_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::Class_MetaDataParams))
 	};
@@ -1269,7 +1288,7 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWeapon, 1420259712);
+	IMPLEMENT_CLASS(AWeapon, 1978134034);
 	template<> TPS_API UClass* StaticClass<AWeapon>()
 	{
 		return AWeapon::StaticClass();

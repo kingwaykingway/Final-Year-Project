@@ -1,6 +1,12 @@
 C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Definitions.TPS.h
 c:\unreal projects\final-year-project\tps\source\tps\Weapon.h
+C:\Unreal Projects\Final-Year-Project\TPS\Source\TPS\InteractionInterface.h
+C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\InteractionInterface.generated.h
 C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\Weapon.generated.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystemComponent.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystem.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ParticleSystem.generated.h

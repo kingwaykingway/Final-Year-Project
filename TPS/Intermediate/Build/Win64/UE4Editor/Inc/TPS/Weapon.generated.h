@@ -14,7 +14,7 @@ struct FVector2D;
 #endif
 #define TPS_Weapon_generated_h
 
-#define TPS_Source_TPS_Weapon_h_48_RPC_WRAPPERS \
+#define TPS_Source_TPS_Weapon_h_49_RPC_WRAPPERS \
 	virtual FVector2D GetRecoil_Implementation(bool aiming); \
 	virtual void ActivateStrobeLight_Implementation(bool activate); \
 	virtual void SwitchTacticalLight_Implementation(); \
@@ -121,7 +121,7 @@ struct FVector2D;
 	}
 
 
-#define TPS_Source_TPS_Weapon_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
+#define TPS_Source_TPS_Weapon_h_49_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execGetRecoil) \
 	{ \
@@ -217,7 +217,7 @@ struct FVector2D;
 	}
 
 
-#define TPS_Source_TPS_Weapon_h_48_EVENT_PARMS \
+#define TPS_Source_TPS_Weapon_h_49_EVENT_PARMS \
 	struct Weapon_eventActivateStrobeLight_Parms \
 	{ \
 		bool activate; \
@@ -247,26 +247,28 @@ struct FVector2D;
 	};
 
 
-#define TPS_Source_TPS_Weapon_h_48_CALLBACK_WRAPPERS
-#define TPS_Source_TPS_Weapon_h_48_INCLASS_NO_PURE_DECLS \
+#define TPS_Source_TPS_Weapon_h_49_CALLBACK_WRAPPERS
+#define TPS_Source_TPS_Weapon_h_49_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWeapon(); \
 	friend struct Z_Construct_UClass_AWeapon_Statics; \
 public: \
 	DECLARE_CLASS(AWeapon, AActor, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/TPS"), NO_API) \
-	DECLARE_SERIALIZER(AWeapon)
+	DECLARE_SERIALIZER(AWeapon) \
+	virtual UObject* _getUObject() const override { return const_cast<AWeapon*>(this); }
 
 
-#define TPS_Source_TPS_Weapon_h_48_INCLASS \
+#define TPS_Source_TPS_Weapon_h_49_INCLASS \
 private: \
 	static void StaticRegisterNativesAWeapon(); \
 	friend struct Z_Construct_UClass_AWeapon_Statics; \
 public: \
 	DECLARE_CLASS(AWeapon, AActor, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/TPS"), NO_API) \
-	DECLARE_SERIALIZER(AWeapon)
+	DECLARE_SERIALIZER(AWeapon) \
+	virtual UObject* _getUObject() const override { return const_cast<AWeapon*>(this); }
 
 
-#define TPS_Source_TPS_Weapon_h_48_STANDARD_CONSTRUCTORS \
+#define TPS_Source_TPS_Weapon_h_49_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AWeapon(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AWeapon) \
@@ -279,7 +281,7 @@ private: \
 public:
 
 
-#define TPS_Source_TPS_Weapon_h_48_ENHANCED_CONSTRUCTORS \
+#define TPS_Source_TPS_Weapon_h_49_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AWeapon(AWeapon&&); \
@@ -290,31 +292,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AWeapon); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AWeapon)
 
 
-#define TPS_Source_TPS_Weapon_h_48_PRIVATE_PROPERTY_OFFSET
-#define TPS_Source_TPS_Weapon_h_45_PROLOG \
-	TPS_Source_TPS_Weapon_h_48_EVENT_PARMS
+#define TPS_Source_TPS_Weapon_h_49_PRIVATE_PROPERTY_OFFSET
+#define TPS_Source_TPS_Weapon_h_46_PROLOG \
+	TPS_Source_TPS_Weapon_h_49_EVENT_PARMS
 
 
-#define TPS_Source_TPS_Weapon_h_48_GENERATED_BODY_LEGACY \
+#define TPS_Source_TPS_Weapon_h_49_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TPS_Source_TPS_Weapon_h_48_PRIVATE_PROPERTY_OFFSET \
-	TPS_Source_TPS_Weapon_h_48_RPC_WRAPPERS \
-	TPS_Source_TPS_Weapon_h_48_CALLBACK_WRAPPERS \
-	TPS_Source_TPS_Weapon_h_48_INCLASS \
-	TPS_Source_TPS_Weapon_h_48_STANDARD_CONSTRUCTORS \
+	TPS_Source_TPS_Weapon_h_49_PRIVATE_PROPERTY_OFFSET \
+	TPS_Source_TPS_Weapon_h_49_RPC_WRAPPERS \
+	TPS_Source_TPS_Weapon_h_49_CALLBACK_WRAPPERS \
+	TPS_Source_TPS_Weapon_h_49_INCLASS \
+	TPS_Source_TPS_Weapon_h_49_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define TPS_Source_TPS_Weapon_h_48_GENERATED_BODY \
+#define TPS_Source_TPS_Weapon_h_49_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	TPS_Source_TPS_Weapon_h_48_PRIVATE_PROPERTY_OFFSET \
-	TPS_Source_TPS_Weapon_h_48_RPC_WRAPPERS_NO_PURE_DECLS \
-	TPS_Source_TPS_Weapon_h_48_CALLBACK_WRAPPERS \
-	TPS_Source_TPS_Weapon_h_48_INCLASS_NO_PURE_DECLS \
-	TPS_Source_TPS_Weapon_h_48_ENHANCED_CONSTRUCTORS \
+	TPS_Source_TPS_Weapon_h_49_PRIVATE_PROPERTY_OFFSET \
+	TPS_Source_TPS_Weapon_h_49_RPC_WRAPPERS_NO_PURE_DECLS \
+	TPS_Source_TPS_Weapon_h_49_CALLBACK_WRAPPERS \
+	TPS_Source_TPS_Weapon_h_49_INCLASS_NO_PURE_DECLS \
+	TPS_Source_TPS_Weapon_h_49_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

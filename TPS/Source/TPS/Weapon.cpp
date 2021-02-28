@@ -2,6 +2,7 @@
 
 
 #include "Weapon.h"
+#include "Components/SphereComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Components/LightComponent.h"
@@ -24,6 +25,7 @@
 #include <CrosshairWidget.cpp>
 #include <Projectile.h>
 #include <TPS\TPSFunctionLibrary.h>
+
 //#include <Projectile.cpp>
 
 // Sets default values
@@ -34,6 +36,8 @@ AWeapon::AWeapon()
 
 	//PrimaryActorTick.bStartWithTickEnabled = false;
 
+	InteractionTrigger = CreateDefaultSubobject<USphereComponent>("Interaction Trigger");
+	InteractionTrigger->SetSphereRadius(250);
 	//USceneComponent* Gun = CreateDefaultSubobject<USceneComponent>("Gun");
 	//Gun->bEditableWhenInherited = true;
 	//GunMesh = CreateDefaultSubobject<USkeletalMeshComponent>("Gun Mesh");
@@ -52,6 +56,7 @@ void AWeapon::BeginPlay()
 
 	// *IMPORTANT: keep this block in BeginPlay. 
 	// Putting this block in constructor will somehow crash the editor. 
+	// InteractionTrigger = FindComponentByClass<USphereComponent>();
 	GunMesh = FindComponentByClass<USkeletalMeshComponent>();
 	LazerPointer = FindComponentByClass<UParticleSystemComponent>();
 	TacticalLight = FindComponentByClass<ULightComponent>();
@@ -322,6 +327,10 @@ FVector2D AWeapon::GetRecoil_Implementation(bool aiming)
 
 	return FVector2D(recoil_H, recoil_V);
 }
+
+//void IInteractionInterface::Interact() {
+//
+//}
 
 //float AWeapon::NormalDistributionRandom(float mean, float sigma)
 //{

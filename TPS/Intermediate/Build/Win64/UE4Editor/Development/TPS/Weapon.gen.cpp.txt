@@ -2,4 +2,6 @@ C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Dev
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 C:\Unreal Projects\Final-Year-Project\TPS\Source\TPS/Weapon.h
+C:\Unreal Projects\Final-Year-Project\TPS\Source\TPS\InteractionInterface.h
+c:\unreal projects\final-year-project\tps\intermediate\build\win64\ue4editor\inc\tps\InteractionInterface.generated.h
 c:\unreal projects\final-year-project\tps\intermediate\build\win64\ue4editor\inc\tps\Weapon.generated.h

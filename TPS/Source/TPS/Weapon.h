@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include <InteractionInterface.h>
 #include "Weapon.generated.h"
 
 UENUM(BlueprintType)
@@ -43,7 +44,7 @@ enum ETargetingTool
  * 
  */
 UCLASS()
-class TPS_API AWeapon : public AActor
+class TPS_API AWeapon : public AActor, public IInteractionInterface
 {
 	GENERATED_BODY()
 	
@@ -66,6 +67,9 @@ public:
 
 
 
+	// 
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = Component)
+		class USphereComponent* InteractionTrigger;
 
 	// Skeletal mesh of the gun. 
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = Component)
