@@ -68,7 +68,7 @@ public:
 
 
 	// 
-	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = Component)
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = Component)
 		class USphereComponent* InteractionTrigger;
 
 	// Skeletal mesh of the gun. 

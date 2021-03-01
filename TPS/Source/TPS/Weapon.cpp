@@ -37,11 +37,26 @@ AWeapon::AWeapon()
 	//PrimaryActorTick.bStartWithTickEnabled = false;
 
 	InteractionTrigger = CreateDefaultSubobject<USphereComponent>("Interaction Trigger");
-	InteractionTrigger->SetSphereRadius(250);
+	if (InteractionTrigger)
+	{	
+		InteractionTrigger->bEditableWhenInherited = true;
+		RootComponent = InteractionTrigger;
+		InteractionTrigger->SetSphereRadius(100);
+	}
+
+
 	//USceneComponent* Gun = CreateDefaultSubobject<USceneComponent>("Gun");
 	//Gun->bEditableWhenInherited = true;
+
 	//GunMesh = CreateDefaultSubobject<USkeletalMeshComponent>("Gun Mesh");
 	//GunMesh->bEditableWhenInherited = true;
+	//if (GunMesh) {
+	//	GunMesh->AddLocalRotation(FRotator(0, -90, 0));
+	//}
+
+	//GunMesh->AddWorldRotation(FRotator(0, 0, -90));
+	//GunMesh->RelativeRotation = FRotator(0, 0, -90);
+	//GunMesh->AddLocalRotation(FRotator(0, 0, -90));
 	//LazerPointer = CreateDefaultSubobject<UParticleSystemComponent>("Lazer Pointer");
 	//LazerPointer->bEditableWhenInherited = true;
 	//static ConstructorHelpers::FObjectFinder<UParticleSystem> LazerBeam(TEXT("/Content/_MyBlueprints/PS_LazerBeam"));
@@ -60,6 +75,12 @@ void AWeapon::BeginPlay()
 	GunMesh = FindComponentByClass<USkeletalMeshComponent>();
 	LazerPointer = FindComponentByClass<UParticleSystemComponent>();
 	TacticalLight = FindComponentByClass<ULightComponent>();
+
+	if (GunMesh)
+	{
+		// GunMesh->bRenderCustomDepth = true;
+		GunMesh->CustomDepthStencilValue = 1;
+	}
 
 	//Crosshair = NewObject<UCrosshairWidget>();
 	FStringClassReference CrosshairWidgetClassRef(TEXT("/Game/_MyAssets/ScopeAndCrosshair/BP_CrosshairWidget.BP_CrosshairWidget_C"));

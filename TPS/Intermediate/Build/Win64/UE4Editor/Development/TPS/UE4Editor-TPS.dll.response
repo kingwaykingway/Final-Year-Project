@@ -34,6 +34,7 @@
 /FUNCTIONPADMIN
 "C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\TPSEditor\Development\Engine\SharedPCH.Engine.h.obj"
 "C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\CrosshairWidget.cpp.obj"
+"C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\InteractionComponent.cpp.obj"
 "C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\InteractionInterface.cpp.obj"
 "C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Projectile.cpp.obj"
 "C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPS.cpp.obj"
@@ -41,6 +42,7 @@
 "C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPSHUD.cpp.obj"
 "C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Weapon.cpp.obj"
 "C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\CrosshairWidget.gen.cpp.obj"
+"C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\InteractionComponent.gen.cpp.obj"
 "C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\InteractionInterface.gen.cpp.obj"
 "C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\Projectile.gen.cpp.obj"
 "C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Development\TPS\TPS.init.gen.cpp.obj"

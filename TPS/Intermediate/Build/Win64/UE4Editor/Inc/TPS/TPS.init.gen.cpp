@@ -11,18 +11,24 @@
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeTPS_init() {}
+	TPS_API UFunction* Z_Construct_UDelegateFunction_TPS_InteractionSignature__DelegateSignature();
+	TPS_API UFunction* Z_Construct_UDelegateFunction_TPS_HighlightSignature__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_TPS()
 	{
 		static UPackage* ReturnPackage = nullptr;
 		if (!ReturnPackage)
 		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_TPS_InteractionSignature__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_TPS_HighlightSignature__DelegateSignature,
+			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/TPS",
-				nullptr,
-				0,
+				SingletonFuncArray,
+				ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x85A474C8,
-				0xBE8C9AFD,
+				0xD76F3952,
+				0xF71F7ED9,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
