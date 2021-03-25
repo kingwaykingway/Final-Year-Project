@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include <InteractionInterface.h>
+#include <InteractionComponent.h>
 #include "Weapon.generated.h"
 
 UENUM(BlueprintType)
@@ -44,7 +45,7 @@ enum ETargetingTool
  * 
  */
 UCLASS()
-class TPS_API AWeapon : public AActor, public IInteractionInterface
+class TPS_API AWeapon : public AActor
 {
 	GENERATED_BODY()
 	
@@ -66,6 +67,8 @@ public:
 	//void SetupIronSightPattern_Implementation();
 
 
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = Component)
+		USceneComponent* Root;
 
 	// 
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = Component)
@@ -88,6 +91,12 @@ public:
 		class UCrosshairWidget* Crosshair;
 	/*UPROPERTY(BlueprintReadOnly, Category = Component)
 		TSubclassOf<class UUserWidget> CrosshairWidgetClass;*/
+
+	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, Category = Component)
+		UInteractionComponent* InteractionComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Component)
+		bool UseDefaultHighlighter;
 
 	// Gun muzzle's offset from the transform center.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)

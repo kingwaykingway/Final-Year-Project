@@ -36,12 +36,13 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 	TPS_API UClass* Z_Construct_UClass_AProjectile_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimationAsset_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	TPS_API UClass* Z_Construct_UClass_UInteractionComponent_NoRegister();
 	TPS_API UClass* Z_Construct_UClass_UCrosshairWidget_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_ULightComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystemComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
-	TPS_API UClass* Z_Construct_UClass_UInteractionInterface_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 // End Cross Module References
 	static UEnum* ETargetingTool_StaticEnum()
 	{
@@ -763,6 +764,15 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MuzzleOffset;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UseDefaultHighlighter_MetaData[];
+#endif
+		static void NewProp_UseDefaultHighlighter_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_UseDefaultHighlighter;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InteractionComponent_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InteractionComponent;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Crosshair_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Crosshair;
@@ -782,8 +792,11 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InteractionTrigger_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InteractionTrigger;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Root_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Root;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -1162,10 +1175,30 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeapon_Statics::NewProp_MuzzleOffset_MetaData[] = {
 		{ "Category", "Gameplay" },
 		{ "ModuleRelativePath", "Weapon.h" },
-		{ "ToolTip", "UPROPERTY(BlueprintReadOnly, Category = Component)\n               TSubclassOf<class UUserWidget> CrosshairWidgetClass;// Gun muzzle's offset from the transform center." },
+		{ "ToolTip", "Gun muzzle's offset from the transform center." },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AWeapon_Statics::NewProp_MuzzleOffset = { "MuzzleOffset", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeapon, MuzzleOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_AWeapon_Statics::NewProp_MuzzleOffset_MetaData, ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::NewProp_MuzzleOffset_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeapon_Statics::NewProp_UseDefaultHighlighter_MetaData[] = {
+		{ "Category", "Component" },
+		{ "ModuleRelativePath", "Weapon.h" },
+	};
+#endif
+	void Z_Construct_UClass_AWeapon_Statics::NewProp_UseDefaultHighlighter_SetBit(void* Obj)
+	{
+		((AWeapon*)Obj)->UseDefaultHighlighter = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AWeapon_Statics::NewProp_UseDefaultHighlighter = { "UseDefaultHighlighter", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AWeapon), &Z_Construct_UClass_AWeapon_Statics::NewProp_UseDefaultHighlighter_SetBit, METADATA_PARAMS(Z_Construct_UClass_AWeapon_Statics::NewProp_UseDefaultHighlighter_MetaData, ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::NewProp_UseDefaultHighlighter_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionComponent_MetaData[] = {
+		{ "Category", "Component" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Weapon.h" },
+		{ "ToolTip", "UPROPERTY(BlueprintReadOnly, Category = Component)\n               TSubclassOf<class UUserWidget> CrosshairWidgetClass;" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionComponent = { "InteractionComponent", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeapon, InteractionComponent), Z_Construct_UClass_UInteractionComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionComponent_MetaData, ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionComponent_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeapon_Statics::NewProp_Crosshair_MetaData[] = {
 		{ "Category", "Component" },
@@ -1210,6 +1243,15 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionTrigger = { "InteractionTrigger", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeapon, InteractionTrigger), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionTrigger_MetaData, ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionTrigger_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWeapon_Statics::NewProp_Root_MetaData[] = {
+		{ "Category", "Component" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Weapon.h" },
+		{ "ToolTip", "void SetupIronSightPattern_Implementation();" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeapon_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AWeapon, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AWeapon_Statics::NewProp_Root_MetaData, ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::NewProp_Root_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWeapon_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_IsStrobeLightActivated,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_StrobeLightFrequency,
@@ -1252,15 +1294,15 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_WeaponType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_RejectorPortOffset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_MuzzleOffset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_UseDefaultHighlighter,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_Crosshair,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_TacticalLight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_LazerPointer,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_GunMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_InteractionTrigger,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeapon_Statics::NewProp_Root,
 	};
-		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AWeapon_Statics::InterfaceParams[] = {
-			{ Z_Construct_UClass_UInteractionInterface_NoRegister, (int32)VTABLE_OFFSET(AWeapon, IInteractionInterface), false },
-		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AWeapon_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AWeapon>::IsAbstract,
 	};
@@ -1271,11 +1313,11 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		DependentSingletons,
 		FuncInfo,
 		Z_Construct_UClass_AWeapon_Statics::PropPointers,
-		InterfaceParams,
+		nullptr,
 		ARRAY_COUNT(DependentSingletons),
 		ARRAY_COUNT(FuncInfo),
 		ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::PropPointers),
-		ARRAY_COUNT(InterfaceParams),
+		0,
 		0x009000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_AWeapon_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_AWeapon_Statics::Class_MetaDataParams))
 	};
@@ -1288,7 +1330,7 @@ void EmptyLinkFunctionForGeneratedCodeWeapon() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWeapon, 1743335154);
+	IMPLEMENT_CLASS(AWeapon, 2140771174);
 	template<> TPS_API UClass* StaticClass<AWeapon>()
 	{
 		return AWeapon::StaticClass();

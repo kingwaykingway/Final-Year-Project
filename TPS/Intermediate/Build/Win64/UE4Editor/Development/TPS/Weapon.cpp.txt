@@ -2,6 +2,8 @@ C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Dev
 c:\unreal projects\final-year-project\tps\source\tps\Weapon.h
 C:\Unreal Projects\Final-Year-Project\TPS\Source\TPS\InteractionInterface.h
 C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\InteractionInterface.generated.h
+C:\Unreal Projects\Final-Year-Project\TPS\Source\TPS\InteractionComponent.h
+C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\InteractionComponent.generated.h
 C:\Unreal Projects\Final-Year-Project\TPS\Intermediate\Build\Win64\UE4Editor\Inc\TPS\Weapon.generated.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
 C:\Program Files\Epic Games\UE_4.22\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h

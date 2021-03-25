@@ -2,6 +2,7 @@
 
 
 #include "Weapon.h"
+#include "InteractionComponent.h"
 #include "Components/SphereComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Particles/ParticleSystemComponent.h"
@@ -36,17 +37,18 @@ AWeapon::AWeapon()
 
 	//PrimaryActorTick.bStartWithTickEnabled = false;
 
+	Root = CreateDefaultSubobject<USceneComponent>("Root");
+	Root->bEditableWhenInherited = true;
+	RootComponent = Root;
+
 	InteractionTrigger = CreateDefaultSubobject<USphereComponent>("Interaction Trigger");
 	if (InteractionTrigger)
 	{	
 		InteractionTrigger->bEditableWhenInherited = true;
-		RootComponent = InteractionTrigger;
-		InteractionTrigger->SetSphereRadius(100);
+		//InteractionTrigger->AttachToComponent(Root, FAttachmentTransformRules::KeepWorldTransform);
+		// RootComponent = InteractionTrigger;
+		// InteractionTrigger->SetSphereRadius(100);
 	}
-
-
-	//USceneComponent* Gun = CreateDefaultSubobject<USceneComponent>("Gun");
-	//Gun->bEditableWhenInherited = true;
 
 	//GunMesh = CreateDefaultSubobject<USkeletalMeshComponent>("Gun Mesh");
 	//GunMesh->bEditableWhenInherited = true;
@@ -61,6 +63,14 @@ AWeapon::AWeapon()
 	//LazerPointer->bEditableWhenInherited = true;
 	//static ConstructorHelpers::FObjectFinder<UParticleSystem> LazerBeam(TEXT("/Content/_MyBlueprints/PS_LazerBeam"));
 	//LazerPointer->SetTemplate();
+
+	InteractionComponent = CreateDefaultSubobject<UInteractionComponent>("Interaction Component");
+	if (InteractionComponent && UseDefaultHighlighter)
+	{
+		FScriptDelegate delegate; 
+		delegate.BindUFunction(InteractionComponent, FName("Highlight_Toon"));
+		InteractionComponent->OnHighlight.Add(delegate);
+	}
 }
 
 // Called when the game starts or when spawned
@@ -80,7 +90,14 @@ void AWeapon::BeginPlay()
 	{
 		// GunMesh->bRenderCustomDepth = true;
 		GunMesh->CustomDepthStencilValue = 1;
+		
+		if (InteractionTrigger)
+		{
+			InteractionTrigger->AttachToComponent(GunMesh, FAttachmentTransformRules::KeepWorldTransform);
+		}
 	}
+
+
 
 	//Crosshair = NewObject<UCrosshairWidget>();
 	FStringClassReference CrosshairWidgetClassRef(TEXT("/Game/_MyAssets/ScopeAndCrosshair/BP_CrosshairWidget.BP_CrosshairWidget_C"));

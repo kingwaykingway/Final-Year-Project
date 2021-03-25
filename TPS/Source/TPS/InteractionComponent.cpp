@@ -44,16 +44,27 @@ void UInteractionComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 	// ...
 }
 
-void UInteractionComponent::Highlight_Implementation(bool isFocused)
+void UInteractionComponent::Interact_Implementation()
+{
+	if (OnInteract.IsBound())
+	{
+		OnInteract.Broadcast();
+	}
+}
+
+void UInteractionComponent::Highlight_Implementation(bool isToHighlight)
+{
+	if (OnHighlight.IsBound())
+	{
+		OnHighlight.Broadcast(isToHighlight);
+	}
+}
+
+void UInteractionComponent::Highlight_Toon(bool isToHighlight)
 {
 	if (VisualizableMesh)
 	{
-		VisualizableMesh->SetRenderCustomDepth(isFocused);
-	}
-
-	if (OnHighlight.IsBound())
-	{
-		OnHighlight.Broadcast(isFocused);
+		VisualizableMesh->SetRenderCustomDepth(isToHighlight);
 	}
 }
 

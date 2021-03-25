@@ -26,8 +26,9 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	//UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
-	//	void Interact();
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+		void Interact();
+		void Interact_Implementation();
 
 	// The function to be called when player can interact with the owner actor. 
 	// Override the function to re-define the highlight effect or add behaviors. 
@@ -35,6 +36,10 @@ public:
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 		void Highlight(bool isToHighlight);
 		void Highlight_Implementation(bool isToHighlight);
+
+	// Default highlighting method that highlights the actor by adding emmissive border to it. 
+	UFUNCTION(BlueprintCallable)
+		void Highlight_Toon(bool isToHighlight);
 
 	// Custom event when player interacts with the owner actor. 
 	// Can be broadcasted in owner's event graph and so. 
@@ -55,4 +60,11 @@ public:
 	// Intended to be displayed in HUD. 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FText HighlightMessage;
+
+	// True if the item is a pickup AND *spawns a copy when picked up*. False otherwise. 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		bool IsDuplicativePickup;
+
+	//UPROPERTY(BlueprintReadOnly)
+
 };
