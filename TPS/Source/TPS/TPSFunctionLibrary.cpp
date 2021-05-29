@@ -5,6 +5,16 @@
 #include "Kismet/KismetMathLibrary.h"
 #include <random>
 
+/**
+ * Generates a normal distribution value derived from a random linear value. 
+ * 
+ * @param mean Expectation of the distribution. Determines the x value corresponding to the highest value, 
+ *		also known as the shift of function curve. 
+ * @param sigma standard deviation of the normal distribution. values are less concentrated towards mean 
+ *		for higher sigma value.  
+ * 
+ * @return 
+ */
 float UTPSFunctionLibrary::NormalDistributionRandom(float mean, float sigma)
 {
 	std::random_device rd{};
@@ -14,6 +24,15 @@ float UTPSFunctionLibrary::NormalDistributionRandom(float mean, float sigma)
 	return d(gen);
 }
 
+/**
+ * Generates normal distribution in 2D coordinate system, constrained by a circle. 
+ *
+ * @param radius Radius of the constrain circle. 
+ * @param isNormalDistribution True for generating coordinates according to normal distribution (the end of
+ *	 vector tends to be close to origin), false for generating coordinates linearly. 
+ *
+ * @return
+ */
 FVector2D UTPSFunctionLibrary::CircleDistributionRandom(float radius, bool isNormalDistribution)
 {
 	float x, y,
@@ -29,6 +48,14 @@ FVector2D UTPSFunctionLibrary::CircleDistributionRandom(float radius, bool isNor
 	return FVector2D(x, y);
 }
 
+/**
+ * Calculates angle btween the two specified spacial vectors using trigonometry functions. 
+ *
+ * @param A First ternary vector as operand of calculation. 
+ * @param B Second ternary vector as operand of calculation. 
+ *
+ * @return Float value as angle between the vectors. Ranged (0, 180).
+ */
 float UTPSFunctionLibrary::AngleBetweenVectors(FVector A, FVector B)
 {
 	A.FVector::Normalize(0.0001f);

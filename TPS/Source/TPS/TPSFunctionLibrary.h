@@ -15,6 +15,7 @@ class TPS_API UTPSFunctionLibrary : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 	
 public:
+	
 	UFUNCTION(BlueprintCallable)
 		static float NormalDistributionRandom(float mean, float sigma);
 
